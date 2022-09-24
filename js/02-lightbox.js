@@ -26,13 +26,14 @@ function clickOnImg(e) {
     return;
     }
 
-    var lightbox = new SimpleLightbox('.gallery a', {
+  if(!document.querySelector('.simple-lightbox'))
+    {var lightbox = new SimpleLightbox('.gallery a', {
         sourceAttr: 'href',
         enableKeyboard: true,
         captionsData: 'alt',
         captionPosition: 'bottom',
         animationSpeed: 250,
-    })
+    })}
 
 }
 
